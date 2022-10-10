@@ -2803,14 +2803,14 @@ function library:Load(options)
     end
 
     local cursor = utility.create("Triangle", {
-        Thickness = 0,
+        Thickness = 6,
         Color = Color3.fromRGB(255, 255, 255),
-        ZIndex = 0
+        ZIndex = 1000
     })
 
     self.cursor = cursor
 
-    services.InputService.MouseIconEnabled = false
+    services.InputService.MouseIconEnabled = true
 
     utility.connect(services.RunService.RenderStepped, function()
         if self.open then
